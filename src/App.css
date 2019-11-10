@@ -1,22 +1,167 @@
-.App {
-  text-align: center;
+body {
+  background: whitesmoke;
 }
 
-.App-logo {
-  height: 40vmin;
+.container {
+  width: 850px;
+  height: 450px;
+  background: black;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
+
+  align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.centred {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.satellite {
+  display: flex;
+  align-items: center;
+
+  margin: auto;
+}
+
+.sat-body-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.sat-body-front {
+  width: 150px;
+  height: 150px;
+  background: rgb(73, 73, 73);
+
+  position: relative;
+}
+
+.sat-body-rear {
+  width: 150px;
+  height: 50px;
+  background: grey;
+  border-radius: 15px 15px 0px 0px;
+}
+
+.sat-right-arm,
+.sat-left-arm {
+  width: 50px;
+  height: 50px;
+  background: blue;
+}
+
+.sat-right-deflector,
+.sat-left-deflector {
+  width: 200px;
+  height: 100px;
+  background: gold;
+  display: grid;
+  display: inline-grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 5px;
+  grid-gap: 5px;
+}
+
+.panel {
+  background: grey;
+}
+
+.control-panel {
+  position: absolute;
+  right: 10%;
+  top: 10%;
+  background: #2d303a;
+
+  display: grid;
+  height: 60px;
+  width: 50px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+
+  grid-gap: 5px;
+  padding: 5px;
+}
+
+.control-screen {
+  grid-column: 1 / span 3;
+  grid-row: 1 / span 2;
+  background: #222;
+}
+
+.button-1 {
+  grid-column: 1;
+}
+
+.button-1 {
+  grid-column: 2;
+}
+
+.button-1 {
+  grid-column: 3;
+}
+
+div[class^="button-"] {
+  grid-row: 3;
+
+  border-radius: 100%;
+  background: palegreen;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+  height: 10px;
+  width: 10px;
+  margin: auto;
+}
+
+.sat-body-comms {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #09d3ac;
+.sat-comms-arm {
+  width: 10px;
+  height: 20px;
+  background: rgb(73, 73, 73);
+}
+
+.sat-comms-dish {
+  width: 120px;
+  height: 20px;
+  background-color: gold;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  border: 10px solid gray;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  transform: rotate(10deg);
+}
+
+.antenna {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ant-1 {
+  height: 20px;
+  width: 2px;
+  background: chartreuse;
+}
+
+.ant-2 {
+  height: 10px;
+  width: 10px;
+  background: chartreuse;
+  border-radius: 100%;
+}
+
+div[class*="ant-"] {
+  background: palegreen;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
 }
